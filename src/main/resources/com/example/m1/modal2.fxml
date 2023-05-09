@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.m1.Controller.editOccup">
+   <top>
+      <Pane prefHeight="109.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right, #36d1dc, #5b86e5);;" stylesheets="@CSS/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="30.0" prefHeight="49.0" prefWidth="277.0" text="FORMULAIRE OCCUPATION" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="35.0" layoutY="29.0" prefHeight="153.0" prefWidth="426.0">
+               <children>
+                  <MFXComboBox fx:id="profF" floatingText="Professeur" prefHeight="40.0" prefWidth="398.0" stylesheets="@CSS/style.css">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </MFXComboBox>
+                  <MFXComboBox fx:id="salleF" floatingText="Salle" prefHeight="40.0" prefWidth="398.0" stylesheets="@CSS/style.css">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </MFXComboBox>
+                  <MFXDatePicker fx:id="dateF" floatMode="BORDER" floatingText="Date" prefHeight="38.0" prefWidth="398.0" stylesheets="@CSS/style.css">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </MFXDatePicker>
+               </children>
+            </VBox>
+            <MFXButton id="BTN2" layoutX="321.0" layoutY="200.0" onAction="#update" prefHeight="49.0" prefWidth="105.0" stylesheets="@CSS/style.css" text="MODIFIER" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

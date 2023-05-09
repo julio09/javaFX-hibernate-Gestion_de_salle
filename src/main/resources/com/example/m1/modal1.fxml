@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.m1.Controller.editSalle">
+   <top>
+      <Pane prefHeight="109.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to right, #36d1dc, #5b86e5);;" stylesheets="@CSS/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="30.0" prefHeight="49.0" prefWidth="277.0" text="FORMULAIRE SALLE" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="6.0" prefHeight="48.0" prefWidth="366.0">
+               <font>
+                  <Font name="Roboto Light" size="20.0" />
+               </font>
+            </Label>
+            <VBox layoutX="37.0" layoutY="79.0" prefHeight="85.0" prefWidth="382.0">
+               <children>
+                  <MFXTextField fx:id="desF" floatMode="BORDER" floatingText="DESIGNATION" prefHeight="38.0" prefWidth="486.0" stylesheets="@CSS/style.css">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </MFXTextField>
+               </children>
+            </VBox>
+            <MFXButton id="BTN2" layoutX="314.0" layoutY="164.0" onAction="#update" prefHeight="49.0" prefWidth="105.0" stylesheets="@CSS/style.css" text="MODIFIER" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

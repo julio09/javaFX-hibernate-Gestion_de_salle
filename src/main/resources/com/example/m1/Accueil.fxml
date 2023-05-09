@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="816.0" prefWidth="1213.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.m1.Controller.Accueil">
+   <VBox layoutX="6.0" layoutY="117.0" prefHeight="699.0" prefWidth="213.0" style="-fx-background-color: linear-gradient(to top, #000046, #1cb5e0);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="117.0">
+      <Separator opacity="0.45" prefHeight="0.0" prefWidth="203.0">
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" top="70.0" />
+         </VBox.margin>
+      </Separator>
+      <MFXButton id="btn" buttonType="RAISED" computeRadiusMultiplier="false" depthLevel="LEVEL5" onAction="#profRoute" prefHeight="49.0" prefWidth="931.0" stylesheets="@CSS/style.css" text="PROFFESSEUR">
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Roboto Medium" size="12.0" />
+         </font>
+      </MFXButton>
+      <MFXButton id="btn" buttonType="RAISED" depthLevel="LEVEL5" onAction="#salleRoute" prefHeight="49.0" prefWidth="796.0" stylesheets="@CSS/style.css" text="SALLE">
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Roboto Bold" size="12.0" />
+         </font>
+      </MFXButton>
+      <MFXButton id="btn" buttonType="RAISED" depthLevel="LEVEL5" onAction="#occuperRoute" prefHeight="49.0" prefWidth="935.0" stylesheets="@CSS/style.css" text="OCCUPER">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Roboto Bold" size="12.0" />
+         </font>
+      </MFXButton>
+      <Separator opacity="0.45" prefWidth="200.0">
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" top="20.0" />
+         </VBox.margin>
+      </Separator>
+   </VBox>
+   <HBox alignment="CENTER" layoutX="210.0" layoutY="6.0" prefHeight="117.0" prefWidth="1003.0" style="-fx-background-color: linear-gradient(to bottom, #000046, #1cb5e0);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label alignment="CENTER" graphicTextGap="6.0" prefHeight="117.0" prefWidth="663.0" text="GESTION DES SALLES DE CLASSES" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="40.0" />
+         </font>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </Label>
+      <ImageView fitHeight="57.0" fitWidth="53.0">
+         <Image url="@../../../ICON/ecole.png" />
+      </ImageView>
+   </HBox>
+   <BorderPane fx:id="pane" layoutX="210.0" layoutY="117.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="117.0" />
+</AnchorPane>

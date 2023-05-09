@@ -1,0 +1,51 @@
+<!--
+  ~ Copyright (c) 2022. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property><!-- ou son nouveau nom com.mysql.cj.jdbc.Driver -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/salle</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"/>
+
+        <!-- dbcp connection pool configuration-->
+        <property name="hibernate.dbcp.initialSize">5</property>
+        <!--property name="hibernate.dbcp.maxTotal">5</property>
+        <property name="hibernate.dbcp.maxIdle">10</property>
+        <property name="hibernate.dbcp.minIdle">5</property>
+        <property name="hibernate.dbcp.maxWaitMillis">-1</property-->
+		
+		<!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+		<!-- Set the cache provider -->
+        <property name="cache.provider_class">
+		    org.hibernate.cache.NoCacheProvider
+		</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+
+
+		<!-- Enities to mapping-->
+        <mapping class="com.example.m1.Entity.Prof"/>
+        <mapping class="com.example.m1.Entity.Salle"/>
+        <mapping class="com.example.m1.Entity.Occuper"/>
+    </session-factory>
+
+</hibernate-configuration>
